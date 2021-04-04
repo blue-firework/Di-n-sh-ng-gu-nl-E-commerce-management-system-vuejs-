@@ -10,7 +10,7 @@ import axios from 'axios'
 //配置请求的根路径
 axios.defaults.baseURL = 'http://106.53.73.30:8888/api/private/v1/'
 axios.interceptors.request.use(config => {
-  console.log(config);
+  // console.log(config);
   config.headers.Authorization = window.sessionStorage.getItem('token')
   //在最好必须 return cofig
   return config
